@@ -99,5 +99,5 @@ I would like to thank you all who support this project.
 
 ## 📝 License
 
-This project is [MIT](./MIT.md) licensed.
+This project is [MIT](./LICENSE) licensed.
 

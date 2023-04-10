@@ -1,11 +1,17 @@
-# Enumerable
+# OOP School Library
 
-> This is an educational project to create a class MyList and a module MyEnumerable using Ruby programming language. The module MyEnumerable will implement a subset of the functionality of Enumerable.
+> OOP School Library is a tool to record what books are in the library and who borrows them.
 
 ## Built With
 
 - **Languages & Technologies:**
   - Ruby
+
+### Key Features <a name="key-features"></a>
+
+- **[add_Person,Student,and_Teacher_classes]**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Authors
 
@@ -14,12 +20,6 @@
 - GitHub: [@githubhandle](https://github.com/Rhaegar121)
 - Twitter: [@twitterhandle](https://twitter.com/20Rhaegar)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/kaung-myat-kyaw-391720227)
-
-👤 **Mohi**
-
-- GitHub: [@mohisa302](https://github.com/mohisa302)
-- Twitter: [@Kholochelam](https://twitter.com/Kholochelam)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/mohadese-sadeghi-692551199/)
 
 ## 🤝 Contributing
 

@@ -48,16 +48,31 @@ To get a local copy up and running follow these simple example steps.
 - To clone this repo:
   - Open the Terminal(Mac/Linux) or the Cmd (Windows);
   - Navigate to where you want to paste the Repo folder;
-  
-### Run tests
+  - Run the following commands
+```
+git clone https://github.com/Rhaegar121/OOP-School-Library.git
+cd OOP-School-Library
+```
 
-- ruboto
-- You can run the code on IRB;
-- You can also run the code using code runner on vs code ctrl + alt + n
+
+### Install
+```
+  bundle install
+```  
+
+### Usage
+```
+irb
+```
+### Run tests
+```
+rspec spec
+```
 
 ### Key Features <a name="key-features"></a>
 
 - **[add_Person,Student,and_Teacher_classes]**
+- **[decorator_design_pattern]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

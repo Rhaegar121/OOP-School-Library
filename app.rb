@@ -53,4 +53,17 @@ class App
         @books << Book.new(title, author)
         puts 'Book created successfully'
     end
+
+    def create_rental
+        puts 'Select a book from the following list by number'
+        @books.each_with_index { |book, index| puts "#{index}) Title: \"#{book.title}\", Author: #{book.author}" }
+        book_number = gets.chomp.to_i
+        puts 'Select a person from the following list by number (not id)'
+        @people.each_with_index { |person, index| puts "#{index}) [#{person.class}] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}"}
+        person_number = gets.chomp.to_i
+        print 'Date: '
+        date = gets.chomp
+        @rentals << Rental.new(date, @people[person_number], @books[book_number])
+        puts 'Rental created successfully'
+    end
 end

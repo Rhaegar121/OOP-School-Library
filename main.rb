@@ -1,7 +1,7 @@
 require_relative 'app'
 
 def main
-    app = App.new
+    app = App.new()
 
     puts "Welcome to School Library App!\n\n"
     puts 'Please choose an option by entering a number: '
@@ -27,4 +27,5 @@ def main
         end
     end
 end
-    
+
+main()

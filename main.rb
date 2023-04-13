@@ -40,7 +40,7 @@ def main
   loop do
     puts list_options
     option = gets.chomp.to_i
-    puts option(option, app)
+    option(option, app)
   end
 end
 

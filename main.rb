@@ -1,9 +1,11 @@
 require_relative 'app'
 
 def main
-    app = App.new()
+  app = App.new
 
-    puts "Welcome to School Library App!\n\n"
+  puts "Welcome to School Library App!\n\n"
+
+  loop do
     puts 'Please choose an option by entering a number: '
     puts '1 - List of all books'
     puts '2 - List of all people'
@@ -13,19 +15,20 @@ def main
     puts '6 - List of all rental for given id'
     puts '7 - Exit'
     option = gets.chomp.to_i
-    loop do
-        case option
-        when 1 then app.list_books
-        when 2 then app.list_people
-        when 3 then app.create_person
-        when 4 then app.create_book
-        when 5 then app.create_rental
-        when 6 then app.list_rentals
-        when 7 break
-        else
-            puts 'Invalid option, please type correct number!'
-        end
+
+    case option
+    when 1 then app.list_books
+    when 2 then app.list_people
+    when 3 then app.create_person
+    when 4 then app.create_book
+    when 5 then app.create_rental
+    when 6 then app.list_rentals
+    when 7
+      break
+    else
+      puts 'Invalid option, please type correct number!'
     end
+  end
 end
 
-main()
+main

@@ -14,6 +14,7 @@ class Option
     when 6
       app.list_rentals
     when 7
+      app.save_data
       exit
     else
       puts 'Invalid option, please type correct number!'

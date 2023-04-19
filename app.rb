@@ -4,6 +4,7 @@ require_relative 'classroom'
 require_relative 'student'
 require_relative 'teacher'
 require_relative 'rental'
+require 'json'
 
 class App
   attr_accessor :people, :books, :rentals
@@ -74,5 +75,22 @@ class App
     @rentals.each do |rental|
       puts "Date: #{rental.date}, Book: \"#{rental.book.title} by #{rental.book.author}" if rental.person.id == id
     end
+  end
+
+  def save_data
+    books = @books.map { |book| { title: book.title, author: book.author } }.to_a.to_json
+
+    rentals_json = @rentals.map do |rental|
+      { date: rental.date, person: { id: rental.person.id, age: rental.person.age, name: rental.person.name },
+      book: { title: rental.book.title, author: rental.book.author } }
+    end.to_a.to_json
+
+    people_json = @people.map do |person|
+      { id: person.id, age: person.age, name: person.name, rentals: [] }
+    end.to_a.to_json
+
+    File.write('books.json', books)
+    File.write('people.json', people)
+    File.write('rentals.json', rentals)
   end
 end

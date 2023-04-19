@@ -1,5 +1,6 @@
 require_relative 'app'
 require_relative 'option'
+require_relative 'read_data'
 
 def list_options
   "Please choose an option by entering a number:
@@ -18,6 +19,7 @@ end
 
 def main
   app = App.new
+  # load_data(app)
 
   puts intro
 

@@ -78,19 +78,19 @@ class App
   end
 
   def save_data
-    books = @books.map { |book| { title: book.title, author: book.author } }.to_a.to_json
+    books = @books.map { |book| { title: book.title, author: book.author } }
 
-    rentals_json = @rentals.map do |rental|
+    rentals = @rentals.map do |rental|
       { date: rental.date, person: { id: rental.person.id, age: rental.person.age, name: rental.person.name },
       book: { title: rental.book.title, author: rental.book.author } }
-    end.to_a.to_json
+    end
 
-    people_json = @people.map do |person|
+    people = @people.map do |person|
       { id: person.id, age: person.age, name: person.name, rentals: [] }
-    end.to_a.to_json
+    end
 
-    File.write('books.json', books)
-    File.write('people.json', people)
-    File.write('rentals.json', rentals)
+    File.write('./data/books.json', JSON.generate(books))
+    File.write('./data/people.json', JSON.generate(people))
+    File.write('./data/rentals.json', JSON.generate(rentals))
   end
 end

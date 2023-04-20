@@ -1,5 +1,5 @@
 class Option
-  def self.option(option, app) # rubocop:disable Metrics/CyclomaticComplexity
+  def self.option(option, app)
     case option
     when 1
       app.list_books
@@ -14,6 +14,7 @@ class Option
     when 6
       app.list_rentals
     when 7
+      app.save_data
       exit
     else
       puts 'Invalid option, please type correct number!'

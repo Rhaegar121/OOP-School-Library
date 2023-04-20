@@ -18,6 +18,12 @@ Metrics/ClassLength:
 Metrics/BlockLength:
   IgnoredMethods: ['describe']
   Max: 30
+Metrics/BlockNesting:
+  Enabled: false
+Metrics/PerceivedComplexity:
+  Enabled: false
+Metrics/CyclomaticComplexity:
+  Enabled: false
 
 
 Style/Documentation:

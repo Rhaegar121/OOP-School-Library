@@ -1,11 +1,11 @@
 require_relative 'spec_helper'
 
 describe 'Book' do
-    before(:each) do
-        @book = Book.new('Title', 'Author')
-    end
+  before(:each) do
+    @book = Book.new('Title', 'Author')
+  end
 
-    describe 'title' do
+  describe 'title' do
     it 'returns the correct title' do
       expect(@book.title).to eql 'Title'
     end

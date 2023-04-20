@@ -1,6 +1,6 @@
-require_relative "app"
-require_relative "option"
-require_relative "load_data"
+require_relative 'app'
+require_relative 'option'
+require_relative 'load_data'
 
 def list_options
   "Please choose an option by entering a number:

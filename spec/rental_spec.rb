@@ -7,9 +7,9 @@ describe Rental do
   end
 
   it 'Create a rental' do
-    rental = Rental.new('2023-04-20', @book, @person)
-    expect(rental.date).to eq('2023-04-20')
-    expect(rental.book).to eq(@book)
-    expect(rental.person) == (@person)
+    @rental = Rental.new('2023-04-20', @person, @book)
+    expect(@rental.date).to eq('2023-04-20')
+    expect(@rental.book).to eq(@book)
+    expect(@rental.person).to eq(@person)
   end
 end

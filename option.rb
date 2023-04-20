@@ -1,5 +1,5 @@
 class Option
-  def self.option(option, app) # rubocop:disable Metrics/CyclomaticComplexity
+  def self.option(option, app)
     case option
     when 1
       app.list_books

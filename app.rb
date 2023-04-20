@@ -33,8 +33,9 @@ class App
     case select_person
     when 1
       print 'Has parent permission? [Y/N]: '
-      permission = gets[0].capitalize
-      permission = permission == 'Y'
+      answer = gets.chomp
+      permission = true if %w[Y y].include?(answer)
+      permission = false if %w[N n].include?(answer)
       @people << Student.new(nil, age, name, permission)
     when 2
       print 'Specialization: '
@@ -59,7 +60,7 @@ class App
     book_number = gets.chomp.to_i
     puts 'Select a person from the following list by number (not id)'
     @people.each_with_index do |person, index|
-      puts "#{index}) [#{person.class}] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}"
+      puts "#{index}) [#{person.class}] ID: #{person.id}, Name: \"#{person.name}\", Age: #{person.age}"
     end
     person_number = gets.chomp.to_i
     print 'Date: '
@@ -81,12 +82,16 @@ class App
     books = @books.map { |book| { title: book.title, author: book.author } }
 
     rentals = @rentals.map do |rental|
-      { date: rental.date, person: { id: rental.person.id, age: rental.person.age, name: rental.person.name },
-      book: { title: rental.book.title, author: rental.book.author } }
+      { date: rental.date, book_index: @books.index(rental.book), book_title: rental.book.title,
+        book_author: rental.book.author, person_index: @people.index(rental.person), person_name: rental.person.name }
     end
 
     people = @people.map do |person|
-      { id: person.id, age: person.age, name: person.name, rentals: [] }
+      if person.instance_of?(::Student)
+        { name: person.name, age: person.age, permission: person.parent_permission, type: person.class }
+      else
+        { name: person.name, age: person.age, specialization: person.specialization, type: person.class }
+      end
     end
 
     File.write('./data/books.json', JSON.generate(books))

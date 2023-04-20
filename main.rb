@@ -19,7 +19,7 @@ end
 
 def main
   app = App.new
-  # load_data(app)
+  load_data(app)
 
   puts intro
 

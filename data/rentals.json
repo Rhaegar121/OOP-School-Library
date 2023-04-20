@@ -1,1 +1,1 @@
-[{"date":"2023-4-19","person":{"id":807,"age":25,"name":"Ross"},"book":{"title":"Harry Potter","author":"JK Rowling"}}]
+[{"date":"2023-4-1","book_index":0,"book_title":"Harry Potter","book_author":"JK Rowling","person_index":0,"person_name":"Ross"},{"date":"2023-4-2","book_index":1,"book_title":"Game of thrones","book_author":"George Martin","person_index":1,"person_name":"Monica"}]
